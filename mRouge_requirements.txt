@@ -8,3 +8,4 @@ pythainlp
 pyonmttok
 jieba
 fugashi[unidic]
+rouge-score
