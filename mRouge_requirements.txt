@@ -9,3 +9,4 @@ pyonmttok
 jieba
 fugashi[unidic]
 rouge-score
+evaluate
