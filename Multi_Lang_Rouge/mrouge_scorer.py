@@ -33,17 +33,16 @@ from nltk.stem import porter
 import six
 from six.moves import map
 from six.moves import range
-# from rouge_score import scoring
-import scoring
-from rouge_score import tokenization_wrapper as tokenize
+import scoring # from rouge_score import scoring
+import tokenization_wrapper as tokenize # from rouge_score import tokenization_wrapper as tokenize
 import pyonmttok
 import collections
-from rouge_score.tokenizers import (
+from tokenizers import (       # from rouge_score.tokenizers import (
 	whitespace_tokenize,
 	BasicTokenizer,
 	LANG2TOKENIZER,
 )
-from rouge_score.stemmers import LANG2STEMMER
+from stemmers import LANG2STEMMER # from rouge_score.stemmers import LANG2STEMMER
 import warnings
 
 # Alternate names for predefined languages
