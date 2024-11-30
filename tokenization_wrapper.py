@@ -21,8 +21,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-# from rouge_score.tokenizers import BasicTokenizer
-from rouge_score.tokenizers import DefaultTokenizer
+from tokenizers import BasicTokenizer
+# from rouge_score.tokenizers import DefaultTokenizer
 
 
 def tokenize(text, stemmer=None, tokenizer=None):
@@ -37,8 +37,8 @@ def tokenize(text, stemmer=None, tokenizer=None):
     A list of string tokens extracted from input text.
   """
   if tokenizer is None:
-    # tokenizer = BasicTokenizer()
-    tokenizer = DefaultTokenizer()
+    tokenizer = BasicTokenizer()
+    # tokenizer = DefaultTokenizer()
     
   # Convert everything to lowercase.
   text = text.lower()
