@@ -30,14 +30,15 @@ import collections
 import re
 
 from nltk.stem import porter
+import pyonmttok
+import collections
 import six
 from six.moves import map
 from six.moves import range
-from rouge_score import scoring
+# from rouge_score import scoring
+import scoring
 # from rouge_score import tokenization_wrapper as tokenize
 import tokenization_wrapper as tokenize
-import pyonmttok
-import collections
 """from rouge_score.tokenizers import (
 	whitespace_tokenize,
 	BasicTokenizer,
