@@ -21,7 +21,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from rouge_score.tokenizers import BasicTokenizer
+# from rouge_score.tokenizers import BasicTokenizer
+from rouge_score.tokenizers import DefaultTokenizer
 
 
 def tokenize(text, stemmer=None, tokenizer=None):
