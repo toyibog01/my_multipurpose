@@ -37,8 +37,9 @@ def tokenize(text, stemmer=None, tokenizer=None):
     A list of string tokens extracted from input text.
   """
   if tokenizer is None:
-    tokenizer = BasicTokenizer()
-
+    # tokenizer = BasicTokenizer()
+    tokenizer = DefaultTokenizer()
+    
   # Convert everything to lowercase.
   text = text.lower()
   # replace punctuation and tokenize
