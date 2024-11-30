@@ -38,7 +38,12 @@ from rouge_score import scoring
 import tokenization_wrapper as tokenize
 import pyonmttok
 import collections
-from rouge_score.tokenizers import (
+"""from rouge_score.tokenizers import (
+	whitespace_tokenize,
+	BasicTokenizer,
+	LANG2TOKENIZER,
+)"""
+from tokenizers import (
 	whitespace_tokenize,
 	BasicTokenizer,
 	LANG2TOKENIZER,
