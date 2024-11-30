@@ -48,7 +48,8 @@ from tokenizers import (
 	BasicTokenizer,
 	LANG2TOKENIZER,
 )
-from rouge_score.stemmers import LANG2STEMMER
+# from rouge_score.stemmers import LANG2STEMMER
+from stemmers import LANG2STEMMER
 import warnings
 
 # Alternate names for predefined languages
