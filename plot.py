@@ -28,8 +28,12 @@ def plot_spectrogram_to_numpy(spectrogram):
 
     fig.canvas.draw()
     # data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+    # data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+
     data = np.frombuffer(fig.canvas.tostring_argb(), dtype=np.uint8)
-    data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    data = data.reshape(fig.canvas.get_width_height()[::-1] + (4,))  # Expecting (H, W, 4)
+    data = data[:, :, 1:]  # Drop the alpha channel to keep only RGB
+    
     plt.close()
     return data
 
@@ -57,12 +61,12 @@ def plot_alignment_to_numpy(alignment, info=None):
     plt.tight_layout()
 
     fig.canvas.draw()
-    # data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
-    # data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+    data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
 
-    data = np.frombuffer(fig.canvas.tostring_argb(), dtype=np.uint8)
-    data = data.reshape(fig.canvas.get_width_height()[::-1] + (4,))  # Expecting (H, W, 4)
-    data = data[:, :, 1:]  # Drop the alpha channel to keep only RGB
+    # data = np.frombuffer(fig.canvas.tostring_argb(), dtype=np.uint8)
+    # data = data.reshape(fig.canvas.get_width_height()[::-1] + (4,))  # Expecting (H, W, 4)
+    # data = data[:, :, 1:]  # Drop the alpha channel to keep only RGB
     
     plt.close()
     return data
