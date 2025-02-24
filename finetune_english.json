@@ -3,7 +3,7 @@
     "push_to_hub": false,
     "hub_model_id": "vits_ljs_welsh_female_monospeaker",
     "overwrite_output_dir": true,
-    "output_dir": "./tmp/vits_finetuned",
+    "output_dir": "./vits_finetuned",
 
     "dataset_name": "ylacombe/english_dialects",    
     "dataset_config_name": "welsh_female", 
