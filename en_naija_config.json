@@ -1,0 +1,34 @@
+{
+    "project_name": "vits_naija_english",
+    "push_to_hub": false,
+    "hub_model_id": "vits_mms_en-9ja,
+    "overwrite_output_dir": true,
+    "output_dir": "./vits_naija_en",
+
+    "dataset_name": "toyrem/naija_english",
+    "audio_column_name": "audio",
+    "text_column_name": "text",
+    "train_split_name": "train",
+    "eval_split_name": "test",
+
+    "max_duration_in_seconds": 205,
+    "min_duration_in_seconds": 1.0,
+    "max_tokens_length": 2250,
+
+    "model_name_or_path": "facebook/mms-tts-eng",
+
+    "preprocessing_num_workers": 4,
+    "do_train": true,
+    "num_train_epochs": 10,
+    "per_device_train_batch_size": 8,
+    "learning_rate": 2e-5,
+    "warmup_ratio": 0.01,
+
+    "do_eval": true,
+    "eval_steps": 100,
+    "per_device_eval_batch_size": 4,
+    "max_eval_samples": 50,
+
+    "fp16": true,
+    "seed": 456
+}
