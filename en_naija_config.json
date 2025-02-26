@@ -1,7 +1,7 @@
 {
     "project_name": "vits_naija_english",
     "push_to_hub": false,
-    "hub_model_id": "vits_mms_en-9ja,
+    "hub_model_id": "vits_mms_en9ja,
     "overwrite_output_dir": true,
     "output_dir": "./vits_naija_en",
 
