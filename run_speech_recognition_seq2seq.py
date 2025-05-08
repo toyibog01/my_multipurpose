@@ -552,7 +552,7 @@ def main():
             # save feature extractor, tokenizer and config
             feature_extractor.save_pretrained(training_args.output_dir)
             tokenizer.save_pretrained(training_args.output_dir)
-            config.save_pretrained(training_args.output_dir)
+            model.config.save_pretrained(training_args.output_dir) # modified to model.config.save...
             model.generation_config.save_pretrained(training_args.output_dir)
 
     processor = AutoProcessor.from_pretrained(training_args.output_dir)
